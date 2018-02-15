@@ -1,6 +1,6 @@
 package org.ziemer;
 
-public class ShellSort implements Sort {
+public class ShellSort extends Sorts implements Sort {
 
     @Override
     public void sort(Comparable[] comparables) {
@@ -17,15 +17,5 @@ public class ShellSort implements Sort {
             }
             h = h/3;
         }
-    }
-
-    private boolean less(Comparable v, Comparable w) {
-        return v.compareTo(w) < 0;
-    }
-
-    private void exchange(Comparable[] comparables, int i, int j) {
-        Comparable swap = comparables[i];
-        comparables[i] = comparables[j];
-        comparables[j] = swap;
     }
 }
